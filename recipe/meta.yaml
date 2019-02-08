@@ -1,5 +1,5 @@
 {% set name = "python-hookman" %}
-{% set version = "0.1.7" %}
+{% set version = "0.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9182f29f42c649a5b9de089a15e0b0a740430a46bb9d7153005403cffeada4da
+  sha256: 1df6248fdb69421d47c981d76cd36c47137b58f9f27b1df0ef70ceb3f21f87b1
 
 build:
   number: 0
