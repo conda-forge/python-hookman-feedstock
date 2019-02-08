@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >= 3.6
+    - python >=3.6
     - setuptools
     - setuptools_scm
   run:
     - attrs
     - click >=6.0
     - invoke
-    - python >= 3.6
+    - python >=3.6
     - strictyaml
 
 test:
