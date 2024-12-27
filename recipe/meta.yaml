@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6f009e6b944af847425121aa147483652c79f26c81ac51da1db0f98811681562
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - hookman=hookman.__main__:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -19,17 +19,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
   run:
     - attrs
     - click >=7.0
     - invoke
-    - python >=3.6
+    - python >={{ python_min }}
     - strictyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - hookman
   commands:
