@@ -1,16 +1,17 @@
 {% set name = "python-hookman" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f009e6b944af847425121aa147483652c79f26c81ac51da1db0f98811681562
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 00dd9a07589e4a112546982416f16593ef199e2a70b99f6413c3e4ff87463726
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - hookman=hookman.__main__:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
