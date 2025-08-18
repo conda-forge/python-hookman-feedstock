@@ -1,5 +1,5 @@
 {% set name = "python-hookman" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 87426b911f723b2ec024c411ed9a5f8a3673b2d4c66600efc84bcda281ccab51
+  sha256: d848025222e4fe48542c2f2b4e3064a12f2de6da62f9688d13ea1d3fc512aba0
 
 build:
   number: 0
