@@ -27,6 +27,7 @@ requirements:
     - attrs
     - click >=7.0
     - invoke
+    - packaging
     - python >={{ python_min }}
     - strictyaml
 
